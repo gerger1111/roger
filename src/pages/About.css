@@ -1,0 +1,107 @@
+/* About Container */
+.about-container {
+    padding: 3rem;
+    text-align: center;
+    background: linear-gradient(135deg, #001f3f, #003366);
+    color: #fff;
+    border-radius: 25px; /* More rounded corners for elegance */
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3); /* Deeper shadow */
+    margin: 3rem auto;
+    max-width: 900px;
+    transition: transform 0.3s ease-in-out;
+    position: relative; /* For overlay effect */
+    overflow: hidden;
+}
+
+/* Adding background overlay circles */
+.about-container::before,
+.about-container::after {
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+    opacity: 0.1;
+    background: rgba(255, 255, 255, 0.2);
+    animation: float 6s ease-in-out infinite;
+}
+
+.about-container::before {
+    width: 300px;
+    height: 300px;
+    top: -50px;
+    left: -50px;
+}
+
+.about-container::after {
+    width: 200px;
+    height: 200px;
+    bottom: -50px;
+    right: -50px;
+}
+
+.about-container:hover {
+    transform: scale(1.02);
+}
+
+h2 {
+    margin-bottom: 1.5rem;
+    font-size: 3rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    animation: fadeIn 1s ease-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.profile-image1 {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 2rem;
+    border: 5px solid #fff;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+    animation: fadeIn 1.5s ease-out;
+}
+
+.profile-image1:hover {
+    transform: rotate(360deg); /* Rotating effect on hover */
+}
+
+.about-content {
+    font-size: 1.3rem;
+    line-height: 1.8;
+    max-width: 700px;
+    margin: 0 auto;
+    animation: fadeIn 2s ease-out;
+}
+
+/* Call to Action Section */
+.call-to-action {
+    margin-top: 2rem;
+}
+
+.call-to-action button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 50px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Added transform for hover */
+}
+
+.call-to-action button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05); /* Slight lift on hover */
+}
+
+/* Floating Background Animation */
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+}

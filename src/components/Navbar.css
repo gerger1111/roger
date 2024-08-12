@@ -1,0 +1,92 @@
+/* Navbar Styles */
+.navbar {
+    background: linear-gradient(135deg, #1d2124, #343a40); /* Elegant gradient background */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4); /* Reduced shadow for subtle depth */
+    position: sticky; /* Sticky navbar */
+    top: 0; /* Stick to the top */
+    z-index: 1000; /* Stay on top of other content */
+    padding: 0.75rem 1.5rem; /* Reduced padding for a more compact look */
+    transition: background 0.4s ease, box-shadow 0.4s ease; /* Smooth transitions */
+  }
+  
+  .navbar:hover {
+    background: linear-gradient(135deg, #343a40, #495057); /* Darker gradient on hover */
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.6); /* Deeper shadow on hover */
+  }
+  
+  .navbar-brand {
+    font-size: 2rem; /* Adjusted font size for better balance */
+    font-weight: bold; /* Bold font */
+    color: #ffffff; /* White text for contrast */
+    text-transform: uppercase; /* Uppercase letters */
+    letter-spacing: 2px; /* Slightly reduced spacing for a cleaner look */
+    transition: color 0.4s ease, transform 0.4s ease; /* Smooth transitions */
+  }
+  
+  .navbar-brand:hover {
+    color: #ffcc00; /* Gold color on hover */
+    transform: translateY(-3px) rotate(-1deg); /* Lift and slight rotation on hover */
+  }
+  
+  .nav-link {
+    font-size: 1rem; /* Adjusted text size for a more compact appearance */
+    margin-left: 20px; /* Adjusted spacing between links */
+    padding: 8px 15px; /* Smaller padding for better compactness */
+    border-radius: 20px; /* Slightly rounded corners */
+    color: #e8e8e8; /* Light gray text color */
+    position: relative; /* For pseudo-element effect */
+    overflow: hidden; /* Ensure child elements stay within bounds */
+    transition: color 0.3s ease; /* Smooth transitions */
+  }
+  
+  .nav-link::before {
+    content: '';
+    position: absolute;
+    background: rgba(255, 204, 0, 0.2); /* Semi-transparent gold background for effect */
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    left: -100%; /* Start off-screen */
+    top: 0; /* Align to top */
+    transition: left 0.4s ease; /* Smooth transition for the effect */
+    z-index: 0; /* Behind text */
+    border-radius: 20px; /* Slightly rounded corners */
+  }
+  
+  .nav-link:hover::before {
+    left: 0; /* Slide in on hover */
+  }
+  
+  .nav-link:hover {
+    color: #ffcc00; /* Gold text color on hover */
+  }
+  
+  .nav-link span {
+    position: relative; /* Position for stacking */
+    z-index: 1; /* Ensure text stays above the background */
+  }
+  
+  .nav-link:hover span {
+    color: #343a40; /* Dark text color on hover */
+  }
+  
+  /* Subtle Glow Effect */
+  .nav-link:hover {
+    text-shadow: 0 0 5px rgba(255, 204, 0, 0.5), 0 0 10px rgba(255, 204, 0, 0.4); /* Glowing effect on hover */
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .navbar {
+      padding: 0.5rem; /* Adjust padding for smaller screens */
+    }
+  
+    .nav-link {
+      margin-left: 10px; /* Reduced margin for mobile */
+      font-size: 0.9rem; /* Smaller text on mobile */
+    }
+  
+    .navbar-brand {
+      font-size: 1.8rem; /* Adjust brand size for smaller screens */
+    }
+  }
+  

@@ -1,0 +1,232 @@
+/* Home Container */
+.home-container {
+  padding: 2rem;
+}
+
+/* Hero Section */
+.hero-section {
+  background: linear-gradient(135deg, #001f3f 0%, #004080 100%);
+  animation: gradient 15s ease infinite; /* Background animation */
+  color: #fff;
+  padding: 5rem 1rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  border-radius: 25px; /* More rounded corners for elegance */
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3); /* Deeper shadow */
+  position: relative;
+  overflow: hidden;
+}
+
+/* Background overlay circles */
+.hero-section::before,
+.hero-section::after {
+  content: '';
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.1;
+  background: rgba(255, 255, 255, 0.2);
+  animation: float 6s ease-in-out infinite;
+}
+
+.hero-section::before {
+  width: 300px;
+  height: 300px;
+  top: -50px;
+  left: -50px;
+}
+
+.hero-section::after {
+  width: 200px;
+  height: 200px;
+  bottom: -50px;
+  right: -50px;
+}
+
+@keyframes gradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
+}
+
+.hero-section h1 {
+  font-size: 3.5rem; /* Larger font size for more impact */
+  margin-top: 1rem;
+  animation: fadeInDown 1s ease-out;
+}
+
+.hero-section h2 {
+  font-size: 2.5rem;
+  animation: fadeInUp 1s ease-out;
+}
+
+.hero-section p {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  animation: fadeIn 1.5s ease-out;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  border-color: #007bff;
+  font-size: 1.2rem;
+  padding: 0.75rem 2rem;
+  border-radius: 25px;
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
+  margin: 1rem; /* Margin for spacing */
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+  transform: translateY(-3px); /* Slight lift on hover */
+  box-shadow: 0 0 20px rgba(0, 123, 255, 1);
+}
+
+/* Profile */
+.profile {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border: 5px solid #007bff;
+  transition: transform 0.3s ease; /* Smooth hover effect */
+}
+
+.profile:hover {
+  transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+/* Fade In Animations */
+@keyframes fadeInDown {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Project Card Styles */
+.project-card {
+  background-color: #002a5c;
+  border-radius: 15px; /* More rounded corners */
+  overflow: hidden;
+  transition: transform 0.2s, box-shadow 0.2s, background-color 0.2s;
+  position: relative; /* For adding overlay effect */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); /* Soft shadow */
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  background-color: #00376b;
+}
+
+.project-card .card-body {
+  color: white;
+  opacity: 0; /* Start hidden */
+  transition: opacity 0.3s; /* Fade in transition */
+}
+
+.project-card:hover .card-body {
+  opacity: 1; /* Show details on hover */
+}
+
+.project-card .card-title {
+  color: white;
+  font-size: 1.5rem;
+}
+
+.project-card .card-img-top {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-bottom: 5px solid #007bff;
+  transition: transform 0.3s ease; /* Smooth scale effect */
+}
+
+.project-card:hover .card-img-top {
+  transform: scale(1.1); /* Slight zoom on image hover */
+}
+
+/* Dot Navigation Styles */
+.dot {
+  height: 12px;
+  width: 12px;
+  margin: 0 5px;
+  border-radius: 50%;
+  background-color: #ccc;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.dot.active {
+  background-color: #007bff;
+  transform: scale(1.5); /* Larger size for active dot */
+}
+
+/* Featured Projects Section */
+.featured-projects {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem 0;
+  padding: 1rem;
+  flex-wrap: wrap; /* Allow wrapping of items */
+}
+
+.featured-project {
+  background-color: #002a5c;
+  border-radius: 15px;
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+  margin: 1rem;
+  flex: 0 1 200px; /* Use a fixed size for a square shape */
+  max-width: 200px; /* Set a maximum width */
+  position: relative; /* For hover effects */
+  height: 200px; /* Fixed height for square shape */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Soft shadow */
+}
+
+.featured-project:hover {
+  transform: scale(1.05); /* Slight scale effect on hover */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.featured-project img {
+  width: 100%;
+  height: 100%; /* Match the height for square shape */
+  object-fit: cover; /* Cover to maintain aspect ratio */
+  transition: transform 0.3s; /* Smooth scale effect */
+}
+
+.featured-project:hover img {
+  transform: scale(1.1); /* Slight zoom effect on image hover */
+}
+
+.featured-project-title {
+  padding: 1rem;
+  text-align: center;
+  color: #fff;
+  font-size: 1.3rem; /* Adjusted font size for better readability */
+  text-transform: uppercase; /* Uppercase for emphasis */
+}
+
+/* Additional hover effect for title */
+.featured-project:hover .featured-project-title {
+  color: #007bff; /* Change title color on hover */
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); /* Text shadow for depth */
+}

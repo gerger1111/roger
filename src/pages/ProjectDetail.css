@@ -1,0 +1,74 @@
+/* src/pages/ProjectDetail.css */
+
+.project-detail-container {
+    text-align: center;
+    padding: 2rem;
+    background-color: #001f3f; 
+    color: #fff; 
+    border-radius: 15px; /* Rounded corners for container */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4); /* Shadow for depth */
+    transition: background 0.3s ease-in-out; /* Transition for background change */
+}
+
+.project-detail-container:hover {
+    background: linear-gradient(135deg, #003366, #004080); /* Gradient on hover */
+}
+
+h2 {
+    font-size: 2.5rem; 
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px; /* Spacing between letters for effect */
+    background: -webkit-linear-gradient(#ffffff, #00aaff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.project-image-container {
+    margin: 1rem 0; 
+    transition: transform 0.3s ease; /* Transition for image scaling */
+}
+
+.project-image {
+    max-width: 100%; 
+    border-radius: 15px; 
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); /* Shadow for image */
+}
+
+.project-image-container:hover .project-image {
+    transform: scale(1.05); /* Scale effect on hover */
+}
+
+.project-description {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #dcdcdc;
+    margin: 1.5rem 0; /* Margin for spacing */
+}
+
+.button-container {
+    margin-top: 20px;
+}
+
+.button-container .btn {
+    padding: 0.75rem 1.5rem; /* Increase padding for a more elegant look */
+    font-size: 1.2rem; /* Font size for button */
+    border-radius: 25px; /* More rounded corners for elegance */
+    background-color: #007bff; /* Button background color */
+    color: #fff; /* Button text color */
+    border: none; /* No border */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Shadow for depth */
+    transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease; /* Transition for effects */
+}
+
+.button-container .btn:hover {
+    background-color: #0056b3; /* Darker background on hover */
+    transform: translateY(-3px); /* Slight lift on hover */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4); /* Enhanced shadow on hover */
+    cursor: pointer; /* Pointer cursor on hover */
+}
+
+.button-container .btn:active {
+    transform: translateY(1px); /* Slight press effect */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Reset shadow on press */
+}

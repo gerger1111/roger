@@ -1,0 +1,45 @@
+.App {
+  text-align: center;
+  background: linear-gradient(135deg, #1a1c20, #3a3f45); /* Elegant gradient background */
+  min-height: 100vh; /* Full height for the background */
+  display: flex; /* Flexbox for layout */
+  flex-direction: column; /* Vertical layout */
+  align-items: center; /* Center align items horizontally */
+  justify-content: center; /* Center align items vertically */
+  color: white; /* Text color */
+  transition: background 0.3s ease; /* Smooth background transition */
+}
+
+.App-header {
+  background: rgba(40, 44, 52, 0.9); /* Slightly transparent dark background for header */
+  min-height: 60vh; /* Minimum height for the header */
+  display: flex; /* Flexbox for header layout */
+  flex-direction: column; /* Vertical layout */
+  align-items: center; /* Center align items horizontally */
+  justify-content: center; /* Center align items vertically */
+  border-radius: 15px; /* Rounded corners */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Shadow for depth */
+  backdrop-filter: blur(10px); /* Blur effect for background */
+  padding: 2rem; /* Padding inside the header */
+  transition: transform 0.3s ease; /* Smooth scaling effect */
+}
+
+.App-header:hover {
+  transform: scale(1.02); /* Slight scaling effect on hover */
+}
+
+footer {
+  position: fixed; /* Fixed footer */
+  bottom: 0; /* Align to bottom */
+  width: 100%; /* Full width */
+  background: rgba(40, 44, 52, 0.9); /* Slightly transparent dark background */
+  color: #ffffff; /* White text color */
+  text-align: center; /* Center align footer text */
+  padding: 1rem 0; /* Padding for footer */
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.3); /* Shadow on top for separation */
+  transition: background 0.3s ease; /* Smooth background transition */
+}
+
+footer:hover {
+  background: rgba(40, 44, 52, 1); /* Solid background on hover */
+}

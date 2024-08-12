@@ -1,0 +1,101 @@
+/* Projects Container */
+.projects-container {
+    padding: 2rem;
+    text-align: center;
+    background-color: #001f3f; 
+    color: #fff;
+    border-radius: 25px; /* More rounded corners for elegance */
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3); /* Deeper shadow */
+    margin: 2rem auto;
+    max-width: 1000px; 
+    background-image: linear-gradient(to bottom right, #001f3f, #004080);
+    transition: background 0.3s ease-in-out, transform 0.3s ease; /* Smooth background transition */
+}
+
+.projects-container:hover {
+    background-image: linear-gradient(to bottom right, #001f3f, #0080ff);
+    transform: scale(1.02); /* Slight scaling on hover */
+}
+
+h2 {
+    margin-bottom: 2rem;
+    font-size: 2.8rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    background: -webkit-linear-gradient(#ffffff, #004080);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: fadeIn 1s ease-out; /* Fade in animation */
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); 
+    gap: 1.5rem;
+}
+
+/* Project Card Styles */
+.project-card {
+    background-color: #002a5c;
+    border-radius: 15px;
+    padding: 2rem;
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s, box-shadow 0.3s;
+    position: relative;
+    overflow: hidden;
+    animation: fadeIn 0.5s ease-out; /* Fade in animation for cards */
+}
+
+.project-card:hover {
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.project-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -75%;
+    width: 150%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.1);
+    transform: skewX(-30deg);
+    transition: 0.6s ease;
+}
+
+.project-card:hover::before {
+    left: 100%;
+    transition: 0.4s ease;
+}
+
+.project-image {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 1.5rem;
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover .project-image {
+    transform: scale(1.1);
+}
+
+.project-title {
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+    color: #ffffff;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+}
+
+.project-description {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #dcdcdc;
+}

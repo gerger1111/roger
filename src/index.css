@@ -1,0 +1,38 @@
+/* src/index.css or src/components/Navbar.css */
+
+.navbar {
+  background-color: #343a40; /* Dark background */
+}
+
+.navbar-brand {
+  font-size: 1.8rem; /* Larger font size */
+  font-weight: bold; /* Bold font */
+}
+
+.nav-link {
+  font-size: 1.1rem; /* Slightly larger text */
+  margin-left: 15px; /* Space between links */
+  transition: color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.nav-link:hover {
+  color: #007bff; /* Change color on hover */
+  text-decoration: underline; /* Underline on hover */
+}
+
+.shadow-sm {
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075)!important; /* Soft shadow effect */
+}
+/* index.css or global CSS file */
+
+body {
+  background-color: #001f3f; /* Navy blue background */
+  color: white; /* Optional: Set text color to white for better contrast */
+  margin: 0; /* Remove default margin */
+  font-family: Arial, sans-serif; /* Set a consistent font */
+}
+/* App.css or your main CSS file */
+
+html {
+  scroll-behavior: smooth; /* Enable smooth scrolling */
+}

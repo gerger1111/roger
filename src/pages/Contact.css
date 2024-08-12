@@ -1,0 +1,158 @@
+.contact-container {
+    max-width: 600px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: linear-gradient(135deg, #e0f7fa, #b2ebf2); /* Soft gradient for a refreshing look */
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative; /* Position for pseudo-elements */
+    overflow: hidden; /* Prevent overflow from pseudo-elements */
+  }
+  
+  .contact-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.3);
+    z-index: 1;
+    pointer-events: none; /* Allow clicks through this element */
+    animation: pulse 6s infinite; /* Animated background effect */
+  }
+  
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.02);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  .contact-container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+  }
+  
+  h1 {
+    margin-bottom: 1.5rem;
+    font-size: 2.5rem;
+    color: #001f3f; /* Navy Blue */
+    text-shadow: 1px 1px 2px rgba(0, 31, 63, 0.3);
+    animation: fadeIn 0.5s ease;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    z-index: 2; /* Bring form above background effects */
+  }
+  
+  .input-field,
+  .textarea-field {
+    margin-bottom: 1rem;
+    padding: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease, box-shadow 0.2s ease;
+    position: relative; /* Position for pseudo-element */
+    z-index: 1; /* Keep fields above background */
+  }
+  
+  .input-field::placeholder,
+  .textarea-field::placeholder {
+    color: #aaa; /* Placeholder color */
+  }
+  
+  .input-field:focus,
+  .textarea-field:focus {
+    border-color: #007bff; /* Navy Blue */
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5), 0 0 10px rgba(0, 123, 255, 0.3);
+  }
+  
+  .submit-button {
+    padding: 1rem;
+    background: linear-gradient(135deg, #007bff, #0056b3); /* Gradient for button */
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    position: relative; /* For positioning pseudo-elements */
+  }
+  
+  .submit-button::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.2);
+    transform: scale(0);
+    transition: transform 0.3s ease;
+    z-index: 0; /* Behind the text */
+  }
+  
+  .submit-button:hover {
+    background: linear-gradient(135deg, #0056b3, #007bff);
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(0, 86, 179, 0.3);
+  }
+  
+  .submit-button:hover::after {
+    transform: scale(1); /* Show the overlay on hover */
+  }
+  
+  .success-message,
+  .error-message {
+    margin-top: 1rem;
+    font-size: 1rem;
+    z-index: 2; /* Above other elements */
+  }
+  
+  .success-message {
+    color: green; /* Color for success message */
+    font-weight: bold;
+    animation: slideIn 0.5s ease;
+  }
+  
+  .error-message {
+    color: red; /* Color for error message */
+    font-weight: bold;
+    animation: slideIn 0.5s ease;
+  }
+  
+  @keyframes slideIn {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
